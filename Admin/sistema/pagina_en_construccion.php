@@ -72,7 +72,7 @@ include "../conexion.php";
             <div class="card-body">
               <h5 class="card-title">Página en construcción</h5>
 
-              <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" height="500" style="display: block; margin: 0 auto;">
+              <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" class="img-fluid" style="display: block; margin: 0 auto;">
 
         </div>
       </div>
