@@ -199,10 +199,10 @@
               </ul>
               <div class="tab-content pt-2" id="borderedTabJustifiedContent">
                 <div class="tab-pane fade show active" id="bordered-justified-alojamientos" role="tabpanel" aria-labelledby="alojamientos-tab">
-                <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" height="500" style="display: block; margin: 0 auto;">
+                <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" class="img-fluid" style="display: block; margin: 0 auto;">
                 </div>
                 <div class="tab-pane fade" id="bordered-justified-vuelos" role="tabpanel" aria-labelledby="vuelos-tab">
-                <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" height="500" style="display: block; margin: 0 auto;">
+                <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" class="img-fluid" style="display: block; margin: 0 auto;">
                 </div>
                 <div class="tab-pane fade" id="bordered-justified-vehiculos" role="tabpanel" aria-labelledby="vehiculos-tab">
                   
@@ -278,7 +278,7 @@
 
                 </div>
                 <div class="tab-pane fade" id="bordered-justified-paquetes" role="tabpanel" aria-labelledby="paquetes-tab">
-                <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" height="500" style="display: block; margin: 0 auto;">
+                <img src="./assets/img/PAGINA_EN_CONSTRUCCION.jpg" alt="Página en construcción" class="img-fluid" style="display: block; margin: 0 auto;">
                 </div>
               </div><!-- End Bordered Tabs Justified -->
 
