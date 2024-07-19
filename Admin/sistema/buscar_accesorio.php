@@ -114,9 +114,6 @@ include "../conexion.php";
                           <a href="#" class="">Precio</a>
                         </th>
                         <th scope="col" data-sortable="">
-                          <a href="#" class="">Empresa</a>
-                        </th>
-                        <th scope="col" data-sortable="">
                           <a href="#" class="">Acciones</a>
                         </th>
                       </tr>
@@ -124,15 +121,13 @@ include "../conexion.php";
 
                     <?php
 
-                        $query = mysqli_query($conexion,"SELECT a.OID, (a.nombre) as nomAcc, a.descripcion, a.precio, (e.nombre) as nomEmp FROM accesorio a INNER JOIN empresa e
-                        ON a.fk_empresa = e.OID
+                        $query = mysqli_query($conexion,"SELECT a.idAccesorio, (a.accesorio) as nomAcc, a.descripcionAccesorio, a.precioAccesorio FROM accesorios a 
                         WHERE 
-                        ( a.OID LIKE '%$busqueda%' OR 
-                          a.nombre LIKE '%$busqueda%' OR 
-                          a.descripcion LIKE '%$busqueda%' OR 
-                          a.precio LIKE '%$busqueda%' OR 
-                          e.nombre LIKE '%$busqueda%' ) 
-                        ORDER BY a.OID ASC ");
+                        ( a.idAccesorio LIKE '%$busqueda%' OR 
+                          a.accesorio LIKE '%$busqueda%' OR 
+                          a.descripcionAccesorio LIKE '%$busqueda%' OR 
+                          a.precioAccesorio LIKE '%$busqueda%' ) 
+                        ORDER BY a.idAccesorio ASC ");
                         mysqli_close($conexion);
                         $result = mysqli_num_rows($query);
                         if($result > 0){
@@ -143,14 +138,13 @@ include "../conexion.php";
 
                     <tbody>
                       <tr>
-                        <th scope="row"><?php echo $accesorios['OID']; ?></th>
+                        <th scope="row"><?php echo $accesorios['idAccesorio']; ?></th>
                         <td><?php echo $accesorios['nomAcc']; ?></td>
-                        <td><?php echo ($accesorios['descripcion']); ?></td>
-                        <td><?php echo ($accesorios['precio']); ?></td>
-                        <td><?php echo ($accesorios['nomEmp']); ?></td>
+                        <td><?php echo ($accesorios['descripcionAccesorio']); ?></td>
+                        <td><?php echo ($accesorios['precioAccesorio']); ?></td>
                         <td>
-						    <a href="editar-accesorios.php?id=<?php echo $accesorios["OID"]; ?>"><button type="button" class="btn btn-primary">Editar</button></a>
-						    <a href="eliminar-accesorios.php?id=<?php echo $accesorios["OID"]; ?>"><button type="button" class="btn btn-danger">Eliminar</button></a>	
+						    <a href="editar-accesorios.php?id=<?php echo $accesorios["idAccesorio"]; ?>"><button type="button" class="btn btn-primary">Editar</button></a>
+						    <a href="eliminar-accesorios.php?id=<?php echo $accesorios["idAccesorio"]; ?>"><button type="button" class="btn btn-danger">Eliminar</button></a>	
 					    </td>
                         </tr>
                         <?php }};?>
